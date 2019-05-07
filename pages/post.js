@@ -1,5 +1,5 @@
 import { getPosts } from '../services/posts';
-import { Link, withNamespaces } from '../i18n.js';
+// import { Link, withNamespaces } from '../i18n.js';
 
 class Post extends React.Component {
   static async getInitialProps(ctx) {
@@ -9,8 +9,6 @@ class Post extends React.Component {
     return { post };
   }
   render() {
-    console.log(this.props.lng);
-
     const { post } = this.props;
     const { title, body } = post;
     return (
@@ -23,4 +21,4 @@ class Post extends React.Component {
   }
 }
 
-export default withNamespaces('translation')(Post);
+export default Post;

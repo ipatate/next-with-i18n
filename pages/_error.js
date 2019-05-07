@@ -1,5 +1,5 @@
 import React from 'react';
-import { withNamespaces } from '../i18n.js';
+// import { withNamespaces } from '../i18n.js';
 
 class Error extends React.Component {
   static getInitialProps({ res, err }) {
@@ -16,8 +16,8 @@ class Error extends React.Component {
   }
 }
 
-Error.getInitialProps = async ({ req }) => {
-  return { namespacesRequired: ['translation'] };
-};
+// Error.getInitialProps = async ({ req }) => {
+//   return { namespacesRequired: ['translation'] };
+// };
 
-export default withNamespaces('translation')(Error);
+export default Error;
